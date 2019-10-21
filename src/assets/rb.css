@@ -1,0 +1,93 @@
+.ls_box{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: .15rem;
+}
+.cl_box{
+    width: 1.4rem;
+    position: relative;
+    background: #fff;
+    flex-shrink: 0;
+    margin-right: .18rem;
+    margin-bottom: .08rem;
+    border-radius: .1rem;
+    padding: .1rem;
+}
+.sp_box{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+    margin: .05rem 0 .025rem;
+    font-size: .15rem;
+    color: rgba(0,0,0,.9);
+}
+.jg_box{
+    font-size: .2rem;
+    color: #fd414f;
+}
+.jg_nume{
+    font-size: .25rem;
+    color: #fd414f;
+}
+.shop_for{
+    display: flex;
+    justify-content: space-between;
+    margin-top: .15rem;
+}
+.left_box{
+    display: flex;
+    align-items: center;
+}
+.right_box{
+    align-items: center;
+    display: inline-flex;
+    white-space: nowrap;
+    font-size: .14rem;
+    color: #666;
+}
+.img_box{
+    border-radius: .107rem;
+    width: .25rem;
+    height: .25rem;
+}
+.tag_con{
+    margin-top: .08rem;
+    height: .22rem;
+    overflow: hidden;
+}
+.tag_wrap{
+    transform-origin: 0 0;
+    font-size: 0px
+}
+.tag_market{
+    background-color: white;
+    color: rgb(232, 89, 83);
+    border-color: rgba(226, 48, 40, 0.3);
+    display: inline-flex;
+    border: 1px solid;
+    padding: 0 .05rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin: 0 .05rem .2rem 0;
+    border-radius: 2px;
+    white-space: nowrap;
+}
+.imgsrca{
+    display: block;
+    width: 1.4rem;
+}
+.koo_box{
+    font-size: 0px;
+}
+.js_box{
+    margin-left: .05rem;
+    font-size: .15rem;
+    color: #666;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 0.57rem;
+}
