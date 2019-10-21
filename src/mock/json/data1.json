@@ -1,0 +1,14 @@
+[
+    {"route":"/takeoutFood/all","name":"美食","imgurl":"../../../static/wmimg/13.jpg"},
+    {"route":"/Supermarket","name":"便利卖场","imgurl":"../../../static/wmimg/14.jpg"},
+    {"route":"/takeoutFood/all","name":"水果","imgurl":"../../../static/wmimg/11.jpg"},
+    {"route":"/takeoutFood/all","name":"跑腿代购","imgurl":"../../../static/wmimg/12.jpg"},
+    {"route":"/takeoutFood/all","name":"甜品饮品","imgurl":"../../../static/wmimg/15.jpg"},
+    {"route":"/takeoutFood/all","name":"星选好店","imgurl":"../../../static/wmimg/21.jpg"},
+    {"route":"/takeoutFood/all","name":"送药上门","imgurl":"../../../static/wmimg/22.jpg"},
+    {"route":"/takeoutFood/all","name":"大牌惠吃","imgurl":"../../../static/wmimg/23.jpg"},
+    {"route":"/takeoutFood/all","name":"多单有礼","imgurl":"../../../static/wmimg/24.jpg"},
+    {"route":"/takeoutFood/all","name":"签到赢饭钱","imgurl":"../../../static/wmimg/25.jpg"}
+   
+
+]

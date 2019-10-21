@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <style>
+        #management{
+            width:80%;
+            height:100%;
+            margin:0 auto;
+        }
+        h1{
+            text-align:center;
+        }
+        .myform{
+            margin:50px 0;
+            width:80%;
+        }
+        .myform select{
+            display: block;
+            width: 30%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+        .myform .second{
+            font-size:12px;
+            font-weight:normal;
+        }
+        .myform .warning{
+            font-size:10px;
+            color:red;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="management">
+        <h1>后台管理系统</h1>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#Restaurant" aria-controls="Restaurant" role="tab" data-toggle="tab">Restaurant</a></li>
+          <li role="presentation"><a href="#Supermarket" aria-controls="Supermarket" role="tab" data-toggle="tab">Supermarket</a></li>
+          <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+        </ul>
+      
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="Restaurant">
+                <div class="myform">
+                        <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="resType" class="col-sm-2 control-label">店铺类别:</label>
+                                    <div class="col-sm-10">
+                                        <select name="" id="resType">
+                                            <option value="面食粥点" selected>面食粥点</option>
+                                            <option value="简餐便当">简餐便当</option>
+                                            <option value="汉堡披萨">汉堡披萨</option>
+                                            <option value="香锅冒菜">香锅冒菜</option>
+                                            <option value="小吃炸串">小吃炸串</option>
+                                            <option value="地方菜系">地方菜系</option>
+                                            <option value="日韩料理">日韩料理</option>
+                                            <option value="轻食简餐">轻食简餐</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="resName" class="col-sm-2 control-label">店铺名称:</label>
+                                  <div class="col-sm-10">
+                                    <input class="form-control" id="resName">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="resImg" class="col-sm-2 control-label">店铺图片:</label>
+                                  <div class="col-sm-10">
+                                    <input class="form-control" id="resImg">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="resAddress" class="col-sm-2 control-label">店铺地址:</label>
+                                    <div class="col-sm-10">
+                                      <input class="form-control" id="resAddress">
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="resOnTime" class="col-sm-2 control-label">店铺营业时间:</label>
+                                    <div class="col-sm-10">
+                                      <input class="form-control" id="resOnTime">
+                                    </div>
+                                  </div>
+                                <div class="form-group">
+                                    <label for="starLevel" class="col-sm-2 control-label">星级:</label>
+                                    <div class="col-sm-10">
+                                            <label for="starLevel1" class="second col-sm-2 control-label">味道</label>
+                                            <div class="col-sm-2" class="col-sm-1 control-label">
+                                                    <input class="form-control" id="starLevel1">
+                                            </div>
+                                            <label for="starLevel2" class="second col-sm-2 control-label">包装</label>
+                                            <div class="col-sm-2" class="col-sm-1 control-label">
+                                                    <input class="form-control" id="starLevel2">
+                                            </div>
+                                            <label for="starLevel3" class="second col-sm-2 control-label">配送</label>
+                                            <div class="col-sm-2" class="col-sm-1 control-label">
+                                                    <input class="form-control" id="starLevel3">
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="monSale" class="col-sm-2 control-label">月售:</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="monSale">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sendPrice" class="col-sm-2 control-label">起送价:</label>
+                                    <div class="col-sm-2" class="col-sm-2 control-label">
+                                            <input class="form-control" id="sendPrice">
+                                    </div>
+                                    <label for="sendedPrice" class="col-sm-2 control-label">配送价:</label>
+                                    <div class="col-sm-2" class="col-sm-2 control-label">
+                                            <input class="form-control" id="sendedPrice">
+                                    </div>
+                                    <label for="sendedRowPrice" class="col-sm-2 control-label">配送原价:</label>
+                                    <div class="col-sm-2" class="col-sm-2 control-label">
+                                            <input class="form-control" id="sendedRowPrice">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="time" class="col-sm-2 control-label">配送时间</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="time">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="distance" class="col-sm-2 control-label">配送距离</label>
+                                    <div class="col-sm-10">
+                                        <input class="form-control" id="distance">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="resTags" class="col-sm-2 control-label">店铺标签</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" rows="3" style="width:40%" id="resTags"></textarea>
+                                        <span class="warning">多条标签请使用逗号","分割</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="resdiscount" class="col-sm-2 control-label">满减优惠</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" rows="3" style="width:40%" id="resdiscount"></textarea>
+                                        <span class="warning">多条满减请使用逗号","分割</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="menu" class="col-sm-2 control-label">主菜单</label>
+                                    <div class="col-sm-10">
+                                            <div class="form-group" style="height:34px"></div>
+                                            <div class="form-group">
+                                                    <label for="foodType" class="col-sm-3 control-label">菜品类别:</label>
+                                                    <div class="col-sm-9 control-label">
+                                                            <input class="form-control" id="foodType">
+                                                    </div>
+                                            </div>
+                                            <div class="form-group">
+                                                  <label for="foodName" class="col-sm-3 control-label">菜品名称:</label>
+                                                  <div class="col-sm-9">
+                                                    <input class="form-control" id="foodName">
+                                                  </div>
+                                                </div>
+                                            <div class="form-group">
+                                                <label for="foodImg" class="col-sm-3 control-label">菜品图片:</label>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" id="foodImg">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="foodPrice" class="col-sm-3 control-label">菜品价格</label>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" id="foodPrice">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="foodSale" class="col-sm-3 control-label">菜品月售</label>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" id="foodSale">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="evalRate" class="col-sm-3 control-label">菜品好评率</label>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" id="evalRate">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="foodTips" class="col-sm-3 control-label">菜品特色</label>
+                                                <div class="col-sm-9">
+                                                    <textarea class="form-control" rows="3" style="width:40%" id="foodTips"></textarea>
+                                                    <span class="warning">多条标签请使用逗号","分割</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group"> -->
+                                  <!-- <div class="col-sm-offset-12 col-sm-12"> -->
+                                        <button type="button" class="btn btn-primary btn-lg btn-block" id="resBtn">提交</button>
+                                  <!-- </div> -->
+                                <!-- </div> -->
+                              </form>
+                </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="Supermarket">...</div>
+          <div role="tabpanel" class="tab-pane" id="messages">...</div>
+        </div>
+      
+      </div>
+  </body>
+</html>
+<script>
+    $("#resBtn").click(()=>{
+        let resType=$("#resType").val();
+        let resName=$("#resName").val();
+        let resImg=$("#resImg").val();
+        let resAddress=$("#resAddress").val();
+        let resOnTime=$("#resOnTime").val();
+        let starLevel1=$("#starLevel1").val();
+        let starLevel2=$("#starLevel2").val();
+        let starLevel3=$("#starLevel3").val();
+        let monSale=$("#monSale").val();
+        let sendPrice=$("#sendPrice").val();
+        let sendedPrice=$("#sendedPrice").val();
+        let sendedRowPrice=$("#sendedRowPrice").val();
+        let time=$("#time").val();
+        let distance=$("#distance").val();
+        let resTags=$("#resTags").val();
+        let resdiscount=$("#resdiscount").val();
+        let foodType=$("#foodType").val();
+        let foodName=$("#foodName").val();
+        let foodImg=$("#foodImg").val();
+        let foodPrice=$("#foodPrice").val();
+        let foodSale=$("#foodSale").val();
+        let evalRate=$("#evalRate").val();
+        let foodTips=$("#foodTips").val();
+        let menu=JSON.stringify({
+            foodType,
+            foodName,
+            foodImg,
+            foodPrice,
+            foodSale,
+            evalRate,
+            foodTips 
+        });
+        
+
+        $.ajax({
+            url:"http://localhost:3000/server",
+            type:"post",
+            data:{
+                resType,
+                resName,
+                resImg,
+                resAddress,
+                resOnTime,
+                starLevel1,
+                starLevel2,
+                starLevel3,
+                monSale,
+                sendPrice,
+                sendedPrice,
+                sendedRowPrice,
+                time,
+                distance,
+                resTags,
+                resdiscount,
+                foodType,
+                menu
+            },
+            success(res){
+                console.log(res.data.linkid);
+                if(res.data.linkid==0){
+                    alert("数据存储成功");
+                }
+                // if(res.data.linkid==2){
+                //     alert("该用户不存在，请先注册");
+                //     window.location.href="register.html";
+                // }else if(res.data.linkid==3){
+                //     alert("用户登录成功");
+                //     window.localStorage.setItem("token",res.data.token);
+                //     window.location.href="home.html";
+                // }
+            }
+        })
+    })
+</script>
